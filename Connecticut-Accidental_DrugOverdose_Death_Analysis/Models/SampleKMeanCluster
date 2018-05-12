@@ -1,0 +1,109 @@
+=== Run information ===
+
+Scheme:       weka.clusterers.SimpleKMeans -init 0 -max-candidates 100 -periodic-pruning 10000 -min-density 2.0 -t1 -1.25 -t2 -1.0 -N 6 -A "weka.core.EuclideanDistance -R first-last" -I 500 -num-slots 1 -S 10
+Relation:     Final_Preprocesed_Accidental_Drug_Related_Death-weka.filters.unsupervised.attribute.NumericToNominal-Rfirst-last-weka.filters.unsupervised.attribute.NumericToNominal-Rfirst-last
+Instances:    3580
+Attributes:   30
+              ﻿Month
+              Year
+              Gender
+              Race
+              Age
+              Residence City
+              Death City
+              Place of Death
+              Description of Injury
+              InjuryPlace
+              Toxicity Report
+              Heroin
+              Cocaine
+              Fentanyl
+              Oxycodone
+              Oxymorphone
+              EtOH
+              Hydrocodone
+              Benzodiazepine
+              Methadone
+              Amphet
+              Tramad
+              Morphine (not heroin)
+              Other
+              Any Opioid
+              MannerofDeath
+              AmendedMannerofDeath
+Ignored:
+              Residence County
+              Death County
+              DeathLoc
+Test mode:    evaluate on training data
+
+
+=== Clustering model (full training set) ===
+
+
+kMeans
+======
+
+Number of iterations: 5
+Within cluster sum of squared errors: 28465.0
+
+Initial starting points (random):
+
+Cluster 0: Apr,2016,Male,White,26,WALLINGFORD,MERIDEN,'Other Recorded',Unknown,'Hotel or Motel','Acute Intoxication due to the Combined Effects of Fentanyl Cocaine and Heroin',Present,Present,Present,Absent,Absent,Absent,Absent,Absent,Absent,Absent,Absent,Absent,Absent,Absent,Accident,Unknown
+Cluster 1: Apr,2017,Female,White,60,'NEW LONDON','NEW LONDON',Hospital,'Abuse of Medication',Residence,'Abuse of Medication',Absent,Absent,Absent,Present,Absent,Absent,Absent,Absent,Absent,Absent,Absent,Absent,Absent,Absent,Accident,'Acute Intoxication due to the Combined Effects of Oxycodone and Dextro/Levo Methorphan'
+Cluster 2: May,2017,Female,White,58,SEYMOUR,DERBY,Hospital,'Substance Abuse',Residence,'Substance Abuse',Present,Absent,Absent,Absent,Absent,Absent,Absent,Absent,Absent,Absent,Absent,Absent,Absent,Absent,Accident,'Ethanol and Heroin'
+Cluster 3: Jun,2016,Female,'Asian Other',35,BRIDGEPORT,BRIDGEPORT,Hospital,Unknown,Unknown,'Acute Intoxication from the Combined Effects of Heroin Acetyl Fentanyl and Alcohol',Present,Absent,Present,Absent,Absent,Present,Absent,Absent,Absent,Absent,Absent,Absent,Absent,Absent,Accident,Unknown
+Cluster 4: Feb,2012,Male,Black,30,'NEW BRITAIN','NEW BRITAIN',Hospital,Unknown,Other,'Death Associated With Cocaine Use',Absent,Present,Absent,Absent,Absent,Absent,Absent,Absent,Absent,Absent,Absent,Absent,Absent,Absent,Accident,Unknown
+Cluster 5: Sep,2016,Male,'Hispanic White',58,HARTFORD,HARTFORD,Hospital,'Substance Abuse',Unknown,'Acute Fentanyl Intoxication',Absent,Absent,Present,Absent,Absent,Absent,Absent,Absent,Absent,Absent,Absent,Absent,Absent,Absent,Accident,Unknown
+
+Missing values globally replaced with mean/mode
+
+Final cluster centroids:
+                                                                                                                                                                                                                                             Cluster#
+Attribute                                                                                                                                                                                                       Full Data                           0                           1                           2                           3                           4                           5
+                                                                                                                                                                                                                 (3580.0)                    (1408.0)                     (508.0)                     (484.0)                     (388.0)                     (453.0)                     (339.0)
+=================================================================================================================================================================================================================================================================================================================================================================================================
+﻿Month                                                                                                                                                                                                              Jun                         Apr                         Apr                         May                         Jun                         Feb                         Nov
+Year                                                                                                                                                                                                                 2016                        2016                        2015                        2017                        2016                        2012                        2016
+Gender                                                                                                                                                                                                               Male                        Male                      Female                        Male                        Male                        Male                        Male
+Race                                                                                                                                                                                                                White                       White                       White                       White                       White                       White                       White
+Age                                                                                                                                                                                                                    49                          26                          50                          34                          35                          51                          28
+Residence City                                                                                                                                                                                                   HARTFORD                   WATERBURY                   WATERBURY                    HARTFORD                  BRIDGEPORT                    HARTFORD                    HARTFORD
+Death City                                                                                                                                                                                                       HARTFORD                   WATERBURY                   WATERBURY                    HARTFORD                  BRIDGEPORT                    HARTFORD                    HARTFORD
+Place of Death                                                                                                                                                                                                  Residence                   Residence                   Residence                   Residence                    Hospital                    Hospital                    Hospital
+Description of Injury                                                                                                                                                                                             Unknown                     Unknown                     Unknown             Substance Abuse                     Unknown                     Unknown                     Unknown
+InjuryPlace                                                                                                                                                                                                     Residence                   Residence                   Residence                   Residence                   Residence                   Residence                   Residence
+Toxicity Report                                                                                                                                                                                           Substance Abuse         Heroin Intoxication      Multiple Drug Toxicity             Substance Abuse      Multiple Drug Toxicity      Multiple Drug Toxicity Acute Fentanyl Intoxication
+Heroin                                                                                                                                                                                                            Present                     Present                      Absent                     Present                     Present                      Absent                      Absent
+Cocaine                                                                                                                                                                                                            Absent                      Absent                      Absent                      Absent                      Absent                     Present                      Absent
+Fentanyl                                                                                                                                                                                                           Absent                      Absent                      Absent                     Present                      Absent                      Absent                     Present
+Oxycodone                                                                                                                                                                                                          Absent                      Absent                     Present                      Absent                      Absent                      Absent                      Absent
+Oxymorphone                                                                                                                                                                                                        Absent                      Absent                      Absent                      Absent                      Absent                      Absent                      Absent
+EtOH                                                                                                                                                                                                               Absent                      Absent                      Absent                      Absent                     Present                      Absent                      Absent
+Hydrocodone                                                                                                                                                                                                        Absent                      Absent                      Absent                      Absent                      Absent                      Absent                      Absent
+Benzodiazepine                                                                                                                                                                                                     Absent                      Absent                      Absent                      Absent                      Absent                      Absent                      Absent
+Methadone                                                                                                                                                                                                          Absent                      Absent                      Absent                      Absent                      Absent                      Absent                      Absent
+Amphet                                                                                                                                                                                                             Absent                      Absent                      Absent                      Absent                      Absent                      Absent                      Absent
+Tramad                                                                                                                                                                                                             Absent                      Absent                      Absent                      Absent                      Absent                      Absent                      Absent
+Morphine (not heroin)                                                                                                                                                                                              Absent                      Absent                      Absent                      Absent                      Absent                      Absent                      Absent
+Other                                                                                                                                                                                                              Absent                      Absent                      Absent                      Absent                      Absent                      Absent                      Absent
+Any Opioid                                                                                                                                                                                                         Absent                      Absent                      Absent                      Absent                      Absent                      Absent                      Absent
+MannerofDeath                                                                                                                                                                                                    Accident                    Accident                    Accident                    Accident                    Accident                    Accident                    Accident
+AmendedMannerofDeath                                                                                                                                                                                              Unknown                     Unknown                     Unknown                     Unknown                     Unknown                     Unknown                     Unknown
+
+
+
+
+Time taken to build model (full training data) : 0.05 seconds
+
+=== Model and evaluation on training set ===
+
+Clustered Instances
+
+0      1408 ( 39%)
+1       508 ( 14%)
+2       484 ( 14%)
+3       388 ( 11%)
+4       453 ( 13%)
+5       339 (  9%)
+
